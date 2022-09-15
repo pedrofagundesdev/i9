@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:devices/helpers/devices_helpers.dart';
+import 'package:devices/helpers/controleslistdevices.dart';
 
 class DevicesPage extends StatefulWidget {
+  // Aqui irie chamar minhas lista fixas para o Formfield
+
   //Função para editar contatos quando estivermos dentro das informações
   final Devices? devices;
   DevicesPage({this.devices});
@@ -18,6 +21,9 @@ class _DevicesPageState extends State<DevicesPage> {
   final _custoController = TextEditingController();
   final _numerodeserieController = TextEditingController();
   final _bateriaController = TextEditingController();
+
+  final _tiposs = tipos;
+  String? _tipossinput;
 
   bool _useredit = false;
   late Devices _editDevices;
@@ -54,16 +60,15 @@ class _DevicesPageState extends State<DevicesPage> {
         padding: EdgeInsets.all(10.0),
         child: Column(
           children: <Widget>[
-            TextField(
-              controller: _tipoController,
-              decoration: InputDecoration(labelText: 'Tipo'),
-              //com on change mudamos o titulo e ainda criamos a regra se houver alguma mundaça ele apresenta um aviso caso seja fechado sem salvar.
-              onChanged: (text) {
-                _useredit = true;
-                setState(() {
-                  _editDevices.tipo = text;
-                });
-              },
+            DropdownButtonFormField<String>(
+              items: _tiposs.map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+              value: _tipossinput,
+              onChanged: (value) {},
             ),
             TextField(
               controller: _modeloController,
