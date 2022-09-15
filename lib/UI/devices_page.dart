@@ -68,7 +68,9 @@ class _DevicesPageState extends State<DevicesPage> {
                 );
               }).toList(),
               value: _tipossinput,
-              onChanged: (value) {},
+              onChanged: (_tipossinput) {
+                _editDevices.tipo = _tipossinput;
+              },
             ),
             TextField(
               controller: _modeloController,
