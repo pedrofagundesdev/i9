@@ -1,39 +1,76 @@
 import 'package:devices/helpers/devices_helpers.dart';
 
+// final String modelosiphoneColumn = 'modelosiphone';
+// final String modelosmacbookColumn = 'modelosmacbook';
+// final String modelosipadColumn = 'modelosipad';
+// final String modelosapplewatchColumn = 'modelosapplewatch';
+// final String modelosairpodsColumn = 'modelosairpods';
+
 List<String> tipos = ['iPhone', 'Macbook', 'iPad', 'Apple Watch', 'Air Pods'];
 
-List<String> modelos = [
-  '6',
-  '6 Plus',
-  '6s',
-  '6s Plus',
-  'SE 1ª',
-  '7',
-  '7 Plus',
-  '8',
-  '8 Plus',
-  'X',
-  'XR',
-  'XS',
-  'XS MAX',
-  'SE 2ª',
-  '11',
-  '11 Pro',
-  '11 Pro Max',
-  '12',
-  '12 Mini',
-  '12 Pro',
-  '12 Pro Max',
-  '13',
-  '13 Mini',
-  '13 Pro',
-  '13 Pro Max',
-  'SE 3ª',
-  '14',
-  '14 Plus',
-  '14 Pro',
-  '14 Pro Max'
-];
+class Modelos {
+  Modelos(
+      {this.modelosiphone,
+      this.modelosmacbook,
+      this.modelosipad,
+      this.modelosapplewatch,
+      this.modelosairpods}) {
+    if (tipos[0] == true) {
+      modelosiphone;
+    } else {
+      ['indisponivel', 'indisponivel'];
+    }
+  }
+
+  List<String>? modelosiphone = [
+    '6',
+    '6 Plus',
+    '6s',
+    '6s Plus',
+    'SE 1ª',
+    '7',
+    '7 Plus',
+    '8',
+    '8 Plus',
+    'X',
+    'XR',
+    'XS',
+    'XS MAX',
+    'SE 2ª',
+    '11',
+    '11 Pro',
+    '11 Pro Max',
+    '12',
+    '12 Mini',
+    '12 Pro',
+    '12 Pro Max',
+    '13',
+    '13 Mini',
+    '13 Pro',
+    '13 Pro Max',
+    'SE 3ª',
+    '14',
+    '14 Plus',
+    '14 Pro',
+    '14 Pro Max'
+  ];
+
+  List<String>? modelosmacbook = ['em manutenção', 'em manutenção'];
+  List<String>? modelosipad = ['em manutenção', 'em manutenção'];
+  List<String>? modelosapplewatch = ['em manutenção', 'em manutenção'];
+  List<String>? modelosairpods = ['em manutenção', 'em manutenção'];
+
+// Map<String, List<> toMap() {
+//   Map<String, List> map = {
+//     modelosiphoneColumn: modelosiphone,
+//     modelosmacbookColumn: modelosmacbook,
+//     modelosipadColumn: modelosipad,
+//     modelosapplewatchColumn: modelosapplewatch,
+//     modelosairpodsColumn: modelosairpods,
+//   };
+//   return map;
+// }
+}
 
 List<String> memoria6 = ['Cinza-Espacial', 'Prateado', 'Dourado'];
 List<String> cor6 = ['16 GB', '32 GB', '64 GB', '128 GB'];
