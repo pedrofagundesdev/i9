@@ -286,15 +286,6 @@ class _DevicesPageState extends State<DevicesPage> {
               //      _editDevices.tipo = _modelossinput;
               //    },
               TextField(
-                controller: _corController,
-                decoration: InputDecoration(labelText: 'Cor'),
-                //com on change mudamos o titulo e ainda criamos a regra se houver alguma mundaça ele apresenta um aviso caso seja fechado sem salvar.
-                onChanged: (text) {
-                  _useredit = true;
-                  _editDevices.cor = text;
-                },
-              ),
-              TextField(
                 controller: _custoController,
                 decoration: InputDecoration(labelText: 'Custo'),
                 onChanged: (text) {
